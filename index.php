@@ -1,5 +1,5 @@
 <?php
-
+namespace Core;
 	error_reporting(E_ALL);
     ini_set('display_errors', 'on');
     
@@ -12,5 +12,7 @@
     });
     
     $routes = require $_SERVER['DOCUMENT_ROOT'] . '/project/config/routes.php';
-    var_dump($routes);
+    $track = ( new Router ) -> getTrack($routes, $_SERVER['REQUEST_URI']);
+    //var_dump ($track);
+
 ?>

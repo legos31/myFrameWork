@@ -3,7 +3,7 @@
 use \Core\Route;
 
 return [
-	new Route('q','w','e'),
+	new Route('/test/:var1/:var2/', 'test', 'index'),
     ];
     
 ?>
